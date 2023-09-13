@@ -1,0 +1,44 @@
+@import 'variable.scss';
+@import 'mixin.scss';
+
+body{
+    width: auto;
+    height: 100vh;
+    @include background;
+    font-size: 1.3em;
+    header{
+        text-align: center;
+        margin: 5% 0;
+        color: $title-color;
+    }
+    main{
+        .inForm{
+            text-align: center;
+            
+            .box{
+                label{
+                    margin-left: 5%;
+                                        
+                    color: $label-color;
+                }
+                input{
+                    background-color: $bg-input;
+                    color: $font-button;
+                    border: none;
+                }
+            }
+            button {
+                border: none;
+                background-color: $label-color;
+                color: $font-button;
+                &:hover{
+                    rotate: 15deg;
+                    transition: 1.2s;
+                    box-shadow: 2px 2px 2px black;
+                    
+                }
+            }
+
+        }
+    }
+}

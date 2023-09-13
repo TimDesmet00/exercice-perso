@@ -1,0 +1,33 @@
+body {
+  width: auto;
+  height: 100vh;
+  background: radial-gradient(rgb(209, 130, 37), rgb(255, 228, 196));
+  font-size: 1.3em;
+}
+body header {
+  text-align: center;
+  margin: 5% 0;
+  color: darkred;
+}
+body main .inForm {
+  text-align: center;
+}
+body main .inForm .box label {
+  margin-left: 5%;
+  color: purple;
+}
+body main .inForm .box input {
+  background-color: darkred;
+  color: white;
+  border: none;
+}
+body main .inForm button {
+  border: none;
+  background-color: purple;
+  color: white;
+}
+body main .inForm button:hover {
+  rotate: 15deg;
+  transition: 1.2s;
+  box-shadow: 2px 2px 2px black;
+}/*# sourceMappingURL=style.css.map */

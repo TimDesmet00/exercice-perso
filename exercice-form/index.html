@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form html sass js</title>
+    <meta name="author" value ="Desmet Tim">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-form">
+    <header>
+        <h1>exercice de formulaire en HTML, SASS et Javascript</h1>
+    </header>
+
+    <main>
+        <form class="inForm">
+            <p class="box">
+                <label for="firstName">Prénom: </label>
+                <input type="text" id="firstName" placeholder="Votre Prénom" required>
+            
+                <label for="lastName">Nom: </label>
+                <input type="text" id="lastName" placeholder="Votre Nom" required>
+            
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="pseudo@domaine.com" required>
+            </p>
+            <p class="box">
+                <label for="mdp">Mot de Passe:</label>
+                <input type="password" name="mdp" id="mdp" minlength="8" required>
+            
+                <label for="mdpVerif">Mot de Passe (confirmation)</label>
+                <input type="password" name="mdpVerif" id="mdpVerif" minlength="8" required>
+            </p>
+
+            <p class="box">
+                <input type="checkbox" name="cgdv" id="cgdv">
+                <label for="cgdv">Acceptez-vous les conditions generale d'utilisation</label>
+            </p>
+
+            <p class="box">
+                <input type="checkbox" name="newLet" id="newLet">
+                <label for="newLet">Dessirez-vous recevoir la newsletter du site</label>
+            </p>
+            <button type="submit">Soumettre</button>
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+   <script src="script.js"></script> 
+</body>
+</html>
