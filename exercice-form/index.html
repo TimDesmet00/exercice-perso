@@ -16,24 +16,24 @@
         <form class="inForm">
             <p class="box">
                 <label for="firstName">Prénom: </label>
-                <input type="text" id="firstName" placeholder="Votre Prénom" required>
+                <input type="text" id="firstName" placeholder="Votre Prénom" minlength="3" maxlength="12" required>
             
                 <label for="lastName">Nom: </label>
-                <input type="text" id="lastName" placeholder="Votre Nom" required>
+                <input type="text" id="lastName" placeholder="Votre Nom" minlength="2" maxlength="12" required>
             
                 <label for="email">Email: </label>
                 <input type="email" name="email" id="email" placeholder="pseudo@domaine.com" required>
             </p>
             <p class="box">
                 <label for="mdp">Mot de Passe:</label>
-                <input type="password" name="mdp" id="mdp" minlength="8" required>
+                <input type="password" name="mdp" id="mdp" minlength="8" maxlength="20" required>
             
                 <label for="mdpVerif">Mot de Passe (confirmation)</label>
-                <input type="password" name="mdpVerif" id="mdpVerif" minlength="8" required>
+                <input type="password" name="mdpVerif" id="mdpVerif" minlength="8" maxlength="20" required>
             </p>
 
             <p class="box">
-                <input type="checkbox" name="cgdv" id="cgdv">
+                <input type="checkbox" name="cgdv" id="cgdv" required>
                 <label for="cgdv">Acceptez-vous les conditions generale d'utilisation</label>
             </p>
 
