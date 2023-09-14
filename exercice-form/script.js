@@ -61,6 +61,7 @@ btnSubmit.addEventListener("click", (e) => {
     console.log(user);
 
     // ce code n'est pas de moi c'est un premier essaie pour stocker les donnée dans un fichier json
+
     // Convertissez les données utilisateur en une chaîne JSON
     const jsonData = JSON.stringify(user);
 
