@@ -27,6 +27,7 @@ class User {
 }
 
 // ciblage et recuperation des inputs du formulaire
+const recoveryForm = () => {};
 firstName.addEventListener("input", (e) => {
   prenom = e.target.value;
 });
