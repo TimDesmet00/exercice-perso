@@ -27,9 +27,10 @@ class User {
 }
 
 // ciblage et recuperation des inputs du formulaire
-const recoveryForm = () => {};
+
 firstName.addEventListener("input", (e) => {
   prenom = e.target.value;
+  return prenom;
 });
 
 lastName.addEventListener("input", (e) => {
@@ -53,8 +54,10 @@ cgdv.addEventListener("change", () => {});
 // ciblage et désactivation de event par defaut sur le boutton submit
 btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
+  console.log(mdep);
+
   //vérification des Valeur du formulaire, tout va bien sauf sur les vérification de mdep
-  //   qui a des bug même avec la majuscule se met en erreur et pas de verification de la longueur du mot de passe
+  //après plein de verification en tout genre,le bug est sur les caractere speciauxqui ne se vérifie pas
   switch (true) {
     case prenom.length < 3:
       document.querySelector(".answer").innerHTML =
@@ -75,14 +78,16 @@ btnSubmit.addEventListener("click", (e) => {
       document.querySelector(".answer").innerHTML =
         "<h2>Le nom est trop long</h2>";
       break;
-    // ici commence le bug des mot de passe
-    case mdep.length > 8:
+
+    case mdep.length <= 8:
       document.querySelector(".answer").innerHTML =
         "<h2>Le mot de passe est trop court</h2>";
+      break;
 
-    case mdep.length > 20:
+    case mdep.length >= 20:
       document.querySelector(".answer").innerHTML =
         "<h2>Le mot de passe est trop long</h2>";
+      break;
 
     case !/[A-Z]/.test(mdep):
       document.querySelector(".answer").innerHTML =
@@ -98,8 +103,8 @@ btnSubmit.addEventListener("click", (e) => {
       document.querySelector(".answer").innerHTML =
         "<h2>Il n'y a pas de nombre de votre mot de passe</h2>";
       break;
-
-    case !/[#?!@$%^&*-_<>]/.test(mdep):
+    // cette verification ne se fait pas
+    case !/[#?!@$%^&*-_]/.test(mdep):
       document.querySelector(".answer").innerHTML =
         "<h2>Il n'y a pas de caractère spéciaux dans votre mot de passe</h2>";
       break;
@@ -144,5 +149,6 @@ btnSubmit.addEventListener("click", (e) => {
       //message de validation ou d'erreur de la verification du formulaire
       document.querySelector(".answer").innerHTML =
         "<h2>le Formulaire à bien été envoyer</h2>";
+      break;
   }
 });
