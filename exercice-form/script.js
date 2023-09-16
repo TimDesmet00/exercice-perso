@@ -55,7 +55,8 @@ btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
 
   // vérification que les condition d'utilisation sois accèpter
-  //  et que le mod de passe et la vérification du mot de passe sois identique
+  //  et que le mot de passe et la vérification du mot de passe sois identique
+  //il faudrais ajoutée un vérification de chaque element du formulaire identisque a celle du html
   if (cgdv.checked && mdep === mdepVerif) {
     const newUser = new User(prenom, nom, mail, mdep);
     user.push(newUser);
