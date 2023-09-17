@@ -132,23 +132,50 @@ btnSubmit.addEventListener("click", (e) => {
       // Créez un objet Blob à partir de la chaîne JSON
       const blob = new Blob([jsonData], { type: "application/json" });
 
+      // commentaire du code pour tester le localhost apache24
       // Créez un URL pour le Blob
-      const url = URL.createObjectURL(blob);
+      // const url = URL.createObjectURL(blob);
 
       // Créez un élément d'ancre pour le téléchargement du fichier
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "users.json"; // Nom du fichier de sortie
+      // const a = document.createElement("a");
+      // a.href = url;
+      // a.download = "data/users.json"; // Nom du fichier de sortie
 
       // Cliquez sur l'élément d'ancre pour déclencher le téléchargement
-      a.click();
+      // a.click();
 
       // Nettoyez l'URL créée pour le téléchargement
-      URL.revokeObjectURL(url);
+      // URL.revokeObjectURL(url);
 
       //message de validation ou d'erreur de la verification du formulaire
-      document.querySelector(".answer").innerHTML =
-        "<h2>le Formulaire à bien été envoyer</h2>";
-      break;
+      // document.querySelector(".answer").innerHTML =
+      // "<h2>le Formulaire à bien été envoyer</h2>";
+      // break;
+      // }
+      // });
+
+      // test du code pour le serveur php
+
+      const formData = new FormData();
+      formData.append("userJSON", blob, "users.json");
+
+      // Créez une requête XMLHttpRequest
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://localhost/data/save.php", true);
+
+      // Écoutez l'événement de chargement
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // Affichez un message de succès
+          document.querySelector(".answer").innerHTML =
+            "<h2>Le formulaire a bien été envoyé et les données ont été enregistrées.</h2>";
+        } else {
+          // Affichez un message d'erreur en cas de problème
+          document.querySelector(".answer").innerHTML =
+            "<h2>Une erreur s'est produite lors de l'enregistrement des données.</h2>";
+        }
+      };
+      // Envoyez la requête au serveur
+      xhr.send(formData);
   }
 });
