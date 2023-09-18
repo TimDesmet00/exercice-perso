@@ -104,9 +104,10 @@ btnSubmit.addEventListener("click", (e) => {
         "<h2>Il n'y a pas de nombre de votre mot de passe</h2>";
       break;
     // cette verification ne se fait pas
-    case !/[#?!@$%^&*-_]/.test(mdep):
+    case !/(?=.*?[#?!@$%^&*-_])/.test(mdep):
       document.querySelector(".answer").innerHTML =
         "<h2>Il n'y a pas de caractère spéciaux dans votre mot de passe</h2>";
+      console.log(!/(?=.*?[#?!@$%^&*-_])/.test(mdep));
       break;
 
     case mdep !== mdepVerif:
