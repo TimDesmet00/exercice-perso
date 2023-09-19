@@ -9,8 +9,10 @@
 @mixin right-title-h3{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 1em;
     letter-spacing: 1.2px;
+    border-bottom: 2px solid $underlined-color-right;
+    text-align: center;
+    margin: 30px 8% 1em 8%;
 }
 
 @mixin left-text{
@@ -21,6 +23,7 @@
 
 @mixin right-text{
     line-height: 1.5em;
+    color: $color-text-right;
     letter-spacing: 1px;
 }
 
