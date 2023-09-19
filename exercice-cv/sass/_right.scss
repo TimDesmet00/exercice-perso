@@ -1,0 +1,28 @@
+.right{
+    margin-top: 30px;
+    .profil{
+        text-align: center;
+        .profil-title{
+            @include right-title-h3
+        }
+        .profil-container{
+            padding: 0 10%;
+            margin: auto;
+            .profile-content{
+                @include right-text;
+            }
+        }
+    }
+    .skill{
+        margin: 30px;
+        .skill-title{
+            text-align: center;
+            @include right-title-h3;
+        }
+        .skill-content{
+            padding: 0 5%;
+            list-style-image: url(../image/logo/check-solid\(2xl\).svg);
+            @include right-text
+        }
+    }
+}

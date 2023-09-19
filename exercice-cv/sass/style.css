@@ -67,7 +67,7 @@ header .titre h2 {
 
 .left {
   width: 100%;
-  background-color: blue;
+  background-color: rgb(0, 0, 129);
 }
 .left .photo-profil {
   width: 250px;
@@ -150,6 +150,43 @@ header .titre h2 {
   list-style-image: url(../image/logo/check-solid.svg);
   line-height: 1.5em;
   color: rgb(236, 185, 123);
+  letter-spacing: 1px;
+}
+
+.right {
+  margin-top: 30px;
+}
+.right .profil {
+  text-align: center;
+}
+.right .profil .profil-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: 1.2px;
+}
+.right .profil .profil-container {
+  padding: 0 10%;
+  margin: auto;
+}
+.right .profil .profil-container .profile-content {
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+.right .skill {
+  margin: 30px;
+}
+.right .skill .skill-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: 1.2px;
+}
+.right .skill .skill-content {
+  padding: 0 5%;
+  list-style-image: url(../image/logo/check-solid\(2xl\).svg);
+  line-height: 1.5em;
   letter-spacing: 1px;
 }
 
