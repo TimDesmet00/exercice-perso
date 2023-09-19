@@ -1,0 +1,32 @@
+.left{
+    width: 100%;
+    .photo-profil{
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        margin: auto;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    }
+
+    .contact{
+        text-align: center;
+        margin: 20px 0;
+        .contact-title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+        .contact-content{
+            line-height: 1.5em;
+            
+
+        }
+    }
+    
+}
