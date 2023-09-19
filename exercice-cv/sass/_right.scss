@@ -14,7 +14,7 @@
         }
     }
     .skill{
-        margin: 30px;
+        margin: 30px 8%;
         .skill-title{
             text-align: center;
             @include right-title-h3;
@@ -23,6 +23,28 @@
             padding: 0 5%;
             list-style-image: url(../image/logo/check-solid\(2xl\).svg);
             @include right-text
+        }
+    }
+    .experience{
+        margin: 30px 0;
+        .experience-title{
+            @include right-title-h3;
+            text-align: center
+        }
+        .experience-content{
+            @include right-text;
+            @include array;
+
+        }
+    }
+    .training{
+        .training-title{
+            @include right-title-h3;
+            text-align: center
+        }
+        .training-content{
+            @include right-text;
+            @include array;
         }
     }
 }

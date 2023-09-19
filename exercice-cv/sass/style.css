@@ -174,7 +174,7 @@ header .titre h2 {
   letter-spacing: 1px;
 }
 .right .skill {
-  margin: 30px;
+  margin: 30px 8%;
 }
 .right .skill .skill-title {
   text-align: center;
@@ -188,6 +188,37 @@ header .titre h2 {
   list-style-image: url(../image/logo/check-solid\(2xl\).svg);
   line-height: 1.5em;
   letter-spacing: 1px;
+}
+.right .experience {
+  margin: 30px 0;
+}
+.right .experience .experience-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.right .experience .experience-content {
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  margin: 0 10%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+.right .training .training-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.right .training .training-content {
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  margin: 0 10%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
 }
 
 body {
