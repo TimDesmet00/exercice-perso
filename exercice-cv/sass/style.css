@@ -58,7 +58,7 @@ header .titre h1 {
   margin: 20px;
 }
 header .titre h1 h2 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -90,4 +90,30 @@ header .titre h1 h2 {
 }
 .left .contact .contact-content {
   line-height: 1.5em;
+}
+.left .computer {
+  text-align: center;
+  margin: 20px 0;
+}
+.left .computer .computer-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.left .computer .computer-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.left .language {
+  text-align: center;
+  margin: 20px 0;
+}
+.left .language .language-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.left .language .language-content {
+  display: flex;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=style.css.map */
