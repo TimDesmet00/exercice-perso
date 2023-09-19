@@ -4,12 +4,16 @@ header{
         text-align: center;
         margin-bottom: 20px;
         h1{
-            font-size: 30px;
+            font-size: 35px;
+            font-weight: bold;
             margin: 20px;
-            h2{
-                font-size: 25px;
-                font-weight: bold;
-            }
+            letter-spacing: 1.3px;
         }
+        h2{
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+        
     }
 }
