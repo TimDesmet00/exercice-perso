@@ -7,3 +7,14 @@
 @import 'right.scss';
 
 body{min-width: 375px;}
+
+@media only screen and (min-width: 612px) {
+    body{
+        min-width: 612px;
+        display: grid;
+        grid-template-areas: "header header header"
+                             "left right right"
+                             "left right right"
+                             "left right right";
+    }
+}

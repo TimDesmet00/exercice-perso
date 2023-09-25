@@ -1,4 +1,5 @@
 .left{
+    grid-area: left;
     width: 100%;
     background-color: $background-color-left;
     // margin-bottom: 30px;
@@ -63,6 +64,7 @@
         }
         .quality-container{
             .quality-content{
+                list-style-position: inside;
                 list-style-image: url(../image/logo/check-solid.svg) ;
                 @include left-text;
             }
