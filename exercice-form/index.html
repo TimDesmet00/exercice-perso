@@ -6,6 +6,9 @@
     <title>Form html sass js</title>
     <meta name="author" value ="Desmet Tim">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- <script defer src="../exercice-form/script/script.js"></script> -->
+   <!-- <script defer src="./script/scriptmodif.js"></script> -->
+   <script defer src="./script/scriptmodif2.js"></script>
 </head>
 <body class="body-form">
     <header>
@@ -17,19 +20,25 @@
             <p class="box">
                 <label for="firstName">Prénom: </label>
                 <input type="text" id="firstName" placeholder="3 à 12 caractères" minlength="3" maxlength="12" required>
+                <span id="errorFirstName"></span>
             
                 <label for="lastName">Nom: </label>
                 <input type="text" id="lastName" placeholder="3 à 12 caractères" minlength="2" maxlength="12" required >
+                <span id="errorLastName"></span>
             
                 <label for="email">Email: </label>
                 <input type="email" name="email" id="email" placeholder="pseudo@domaine.com" required>
+                <span id="errorEmail"></span>
             </p>
+            
             <p class="box">
                 <label for="mdp">Mot de Passe:</label>
                 <input type="password" name="mdp" id="mdp" pattern="^(?=.*?[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#?!@$%^&*-_])" minlength="8" maxlength="20" required > <!--verification de la force du mdp coté client-->
+                <span id="errorMdp"></span>
             
                 <label for="mdpVerif">Mot de Passe (confirmation)</label> <!--verification de concordance de mdp en javascript-->
                 <input type="password" name="mdpVerif" id="mdpVerif" minlength="8" maxlength="20" >
+                <span id="errorMdpVerif"></span>
             </p>
 
             <p class="box">
@@ -49,7 +58,6 @@
     <footer>
 
     </footer>
-   <!-- <script src="../exercice-form/script/script.js"></script> -->
-   <script src="./script/scriptmodif.js"></script>
+   
 </body>
 </html>
