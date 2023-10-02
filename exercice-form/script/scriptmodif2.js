@@ -31,7 +31,7 @@ btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   firstName.addEventListener("keyup", (e) => {
     prenom = e.target.value;
-    
+
     if (prenom.length < 3) {
       document.getElementById("errorFirstName").textContent =
         "Prénom trop court";
@@ -39,8 +39,7 @@ btnSubmit.addEventListener("click", (e) => {
       document.getElementById("errorFirstName").textContent =
         "Prénom trop long";
     } else {
-      document.getElementById("errorFirstName").textContent =
-        "Prénom valide";
+      document.getElementById("errorFirstName").textContent = "Prénom valide";
       return prenom;
     }
   });
@@ -48,11 +47,9 @@ btnSubmit.addEventListener("click", (e) => {
   lastName.addEventListener("keyup", (e) => {
     nom = e.target.value;
     if (nom.length < 3) {
-      document.getElementById("errorLastName").textContent =
-        "Nom trop court";
+      document.getElementById("errorLastName").textContent = "Nom trop court";
     } else if (nom.length > 12) {
-      document.getElementById("errorLastName").textContent =
-        "Nom trop long";
+      document.getElementById("errorLastName").textContent = "Nom trop long";
     } else {
       document.getElementById("errorLastName").textContent = "Nom valide";
       return nom;
@@ -99,17 +96,18 @@ btnSubmit.addEventListener("click", (e) => {
         break;
 
       default:
-        document.getElementById("errorMdp").textContent =
-          "Mot de Passe Valide";
+        document.getElementById("errorMdp").textContent = "Mot de Passe Valide";
     }
   });
 
   mdpVerif.addEventListener("input", (e) => {
     mdepVerif = e.target.value;
-    if(mdep !== e.target.value){
-      document.getElementById("errorMdpVerif").textContent = "Les deux mots de passe ne sont pas identique";
-    }else{
-      document.getElementById("errorMdpVerif").textContent = "Les deux mots de passe sont identique";
+    if (mdep !== e.target.value) {
+      document.getElementById("errorMdpVerif").textContent =
+        "Les deux mots de passe ne sont pas identique";
+    } else {
+      document.getElementById("errorMdpVerif").textContent =
+        "Les deux mots de passe sont identique";
       return mdep;
     }
   });
@@ -119,59 +117,59 @@ btnSubmit.addEventListener("click", (e) => {
   const newUser = new User(prenom, nom, mail, mdep);
   user.push(newUser);
   console.log(user);
-// 
-// ce code n'est pas de moi c'est un premier essaie pour stocker les donnée dans un fichier json
+  //
+  // ce code n'est pas de moi c'est un premier essaie pour stocker les donnée dans un fichier json
 
-// Convertissez les données utilisateur en une chaîne JSON
-const jsonData = JSON.stringify(user);
+  // Convertissez les données utilisateur en une chaîne JSON
+  const jsonData = JSON.stringify(user);
 
-// Créez un objet Blob à partir de la chaîne JSON
-const blob = new Blob([jsonData], { type: "application/json" });
+  // Créez un objet Blob à partir de la chaîne JSON
+  const blob = new Blob([jsonData], { type: "application/json" });
 
-// commentaire du code pour tester le localhost apache24
-// Créez un URL pour le Blob
-// const url = URL.createObjectURL(blob);
+  // commentaire du code pour tester le localhost apache24
+  // Créez un URL pour le Blob
+  // const url = URL.createObjectURL(blob);
 
-// Créez un élément d'ancre pour le téléchargement du fichier
-// const a = document.createElement("a");
-// a.href = url;
-// a.download = "data/users.json"; // Nom du fichier de sortie
+  // Créez un élément d'ancre pour le téléchargement du fichier
+  // const a = document.createElement("a");
+  // a.href = url;
+  // a.download = "data/users.json"; // Nom du fichier de sortie
 
-// Cliquez sur l'élément d'ancre pour déclencher le téléchargement
-// a.click();
+  // Cliquez sur l'élément d'ancre pour déclencher le téléchargement
+  // a.click();
 
-// Nettoyez l'URL créée pour le téléchargement
-// URL.revokeObjectURL(url);
+  // Nettoyez l'URL créée pour le téléchargement
+  // URL.revokeObjectURL(url);
 
-//message de validation ou d'erreur de la verification du formulaire
-// document.querySelector(".answer").innerHTML =
-// "<h2>le Formulaire à bien été envoyer</h2>";
-// break;
-// }
-// });
+  //message de validation ou d'erreur de la verification du formulaire
+  // document.querySelector(".answer").innerHTML =
+  // "<h2>le Formulaire à bien été envoyer</h2>";
+  // break;
+  // }
+  // });
 
-// test du code pour le serveur php
+  // test du code pour le serveur php
 
-//       const formData = new FormData();
-//       formData.append("userJSON", blob, "users.json");
+  //       const formData = new FormData();
+  //       formData.append("userJSON", blob, "users.json");
 
-//       // Créez une requête XMLHttpRequest
-//       const xhr = new XMLHttpRequest();
-//       xhr.open("POST", "http://localhost/data/save.php", true);
+  //       // Créez une requête XMLHttpRequest
+  //       const xhr = new XMLHttpRequest();
+  //       xhr.open("POST", "http://localhost/data/save.php", true);
 
-//       // Écoutez l'événement de chargement
-//       xhr.onload = function () {
-//         if (xhr.status === 200) {
-//           // Affichez un message de succès
-//           document.querySelector(".answer").innerHTML =
-//             "<h2>Le formulaire a bien été envoyé et les données ont été enregistrées.</h2>";
-//         } else {
-//           // Affichez un message d'erreur en cas de problème
-//           document.querySelector(".answer").innerHTML =
-//             "<h2>Une erreur s'est produite lors de l'enregistrement des données.</h2>";
-//         }
-//       };
-//       // Envoyez la requête au serveur
-//       xhr.send(formData);
-//   }
+  //       // Écoutez l'événement de chargement
+  //       xhr.onload = function () {
+  //         if (xhr.status === 200) {
+  //           // Affichez un message de succès
+  //           document.querySelector(".answer").innerHTML =
+  //             "<h2>Le formulaire a bien été envoyé et les données ont été enregistrées.</h2>";
+  //         } else {
+  //           // Affichez un message d'erreur en cas de problème
+  //           document.querySelector(".answer").innerHTML =
+  //             "<h2>Une erreur s'est produite lors de l'enregistrement des données.</h2>";
+  //         }
+  //       };
+  //       // Envoyez la requête au serveur
+  //       xhr.send(formData);
+  //   }
 });
