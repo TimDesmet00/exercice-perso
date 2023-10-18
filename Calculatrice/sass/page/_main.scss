@@ -3,18 +3,25 @@ body{
         text-align: center;
         display: flex;
         justify-content: center;
+        grid-template-areas: "screen screen screen screen"
+                             "btn btn btn btn"
+                             "btn btn btn btn"
+                             "btn btn btn btn";
+
         #table{
             width: 75%;
             border: 1px solid black;
             
             
             #screen{
+                grid-area: screen;
                 border: 1px solid black;
                 width: 80%;
                 height: 2em;
                 
             }
             .button{
+                grid-area: btn;
                 border: 1px solid black;
                 width: 80%;
 
