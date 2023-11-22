@@ -1,5 +1,4 @@
 header{
-    grid-area: header;
     width: 100%;
     background-image: url("../image/photo/SL-013020-27540-09.jpg");
     background-size: 100%;
@@ -21,5 +20,33 @@ header{
             letter-spacing: 1.2px;
         }
         
+    }
+}
+
+@media only screen and (min-width: 612px) {
+    header{
+        .titre{
+            padding: 50px 0;
+            h1{
+                font-size: 50px;
+            }
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header{
+        .titre{
+            padding: 60px 0;
+            h1{
+                font-size: 75px;
+            }
+            h2{
+                font-size: 45px;
+            }
+        }
     }
 }

@@ -1,20 +1,22 @@
-@import '../vendor/normalize.scss';
-@import 'variable.scss';
-@import 'mixin.scss';
+@import './vendors/normalize.scss';
+@import './utils/variable.scss';
+@import './utils/mixin.scss';
 
-@import 'header.scss';
-@import 'left.scss';
-@import 'right.scss';
+@import './components/header.scss';
+@import './components/left.scss';
+@import './components/right.scss';
 
 body{min-width: 375px;}
 
 @media only screen and (min-width: 612px) {
     body{
-        min-width: 612px;
+        
+        main{
         display: grid;
-        grid-template-areas: "header header header"
-                             "left right right"
-                             "left right right"
-                             "left right right";
+        grid-template-columns: 1fr 2fr;
+        }
+
+    
     }
 }
+

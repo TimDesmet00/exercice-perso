@@ -1,8 +1,6 @@
 .left{
-    grid-area: left;
-    width: 100%;
-    background-color: $background-color-left;
-    // margin-bottom: 30px;
+    background: $background-color-left;
+    background: linear-gradient(180deg, rgba(0,0,95,1) 40%, rgba(0,0,190,1) 93%, rgba(0,0,255,1) 100%);
     .photo-profil{
         width: 250px;
         height: 250px;
@@ -37,8 +35,13 @@
             @include left-title-h3;
         }
         .computer-content{
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             justify-content: space-evenly;
+            img{
+                width: 20px;
+                
+            }
         }
     }
 

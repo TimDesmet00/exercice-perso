@@ -1,5 +1,4 @@
 .right{
-    grid-area: right;
     padding: 30px 0;
     background-color: $background-color-right;
     .profil{
@@ -47,6 +46,45 @@
         .training-content{
             @include right-text;
             @include array;
+        }
+    }
+}
+
+@media only screen and (min-width: 612px) {
+    .right{
+        .profil{
+            .profil-title{
+                @include right-title-h3-responsive;
+            }
+            .profil-container{
+                .profil-content{
+                    font-size: $size-right-text;
+                }
+            }
+        }
+        .skill{
+            .skill-title{
+                @include right-title-h3-responsive;
+            }
+            .skill-content{
+                font-size: $size-right-text;
+            }
+        }
+        .experience{
+            .experience-title{
+                @include right-title-h3-responsive;
+            }
+            .experience-content{
+                font-size: $size-right-text;
+            }
+        }
+        .training{
+            .training-title{
+                @include right-title-h3-responsive;
+            }
+            .training-content{
+                font-size: $size-right-text;
+            }
         }
     }
 }
