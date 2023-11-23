@@ -38,8 +38,14 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             justify-content: space-evenly;
+            gap: 30px 0;
+            i{
+                font-size: 25px;
+            }
             img{
-                width: 20px;
+                position: relative;
+                left: 35%;
+                width: 30px;
                 
             }
         }
@@ -74,4 +80,41 @@
         }
     }
     
+}
+
+@media only screen and (min-width: 612px) {
+    .left{
+        .contact{
+            .contact-title{
+                @include left-title-h3-responsive;
+            }
+            .contact-content{
+                font-size: $size-left-text;
+            }
+        }
+        .computer{
+            .computer-title{
+                @include left-title-h3-responsive;
+            }
+            .computer-content{
+                font-size: $size-left-text;
+            }
+        }
+        .language{
+            .language-title{
+                @include left-title-h3-responsive;
+            }
+            .language-content{
+                font-size: $size-left-text;
+            }
+        }
+        .quality{
+            .quality-title{
+                @include left-title-h3-responsive;
+            }
+            .quality-content{
+                font-size: $size-left-text;
+            }
+        }
+    }
 }

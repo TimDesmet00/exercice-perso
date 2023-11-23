@@ -139,9 +139,15 @@ header .titre h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-evenly;
+  gap: 30px 0;
+}
+.left .computer .computer-content i {
+  font-size: 25px;
 }
 .left .computer .computer-content img {
-  width: 20px;
+  position: relative;
+  left: 35%;
+  width: 30px;
 }
 .left .language {
   text-align: center;
@@ -181,6 +187,32 @@ header .titre h2 {
   letter-spacing: 1px;
 }
 
+@media only screen and (min-width: 612px) {
+  .left .contact .contact-title {
+    font-size: 25px;
+  }
+  .left .contact .contact-content {
+    font-size: 1em;
+  }
+  .left .computer .computer-title {
+    font-size: 25px;
+  }
+  .left .computer .computer-content {
+    font-size: 1em;
+  }
+  .left .language .language-title {
+    font-size: 25px;
+  }
+  .left .language .language-content {
+    font-size: 1em;
+  }
+  .left .quality .quality-title {
+    font-size: 25px;
+  }
+  .left .quality .quality-content {
+    font-size: 1em;
+  }
+}
 .right {
   padding: 30px 0;
   background-color: bisque;

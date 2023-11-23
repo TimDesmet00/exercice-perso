@@ -6,6 +6,10 @@
     letter-spacing: 1.2px;
 }
 
+@mixin left-title-h3-responsive{
+    font-size: 25px;
+}
+
 @mixin right-title-h3{
     font-size: 20px;
     font-weight: bold;
